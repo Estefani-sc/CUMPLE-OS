@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Cumpleaños Mi Amor ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff7eb3,#ff758c,#ffb199);
+    overflow-x:hidden;
+    color:white;
+}
+
+/* ESTRELLAS */
+
+.estrellas{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.estrellas span{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    animation:brillar 5s linear infinite;
+}
+
+@keyframes brillar{
+
+    0%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-1000px);
+        opacity:0;
+    }
+
+}
+
+/* FLORES */
+
+.flor{
+    position:fixed;
+    top:-50px;
+    font-size:30px;
+    animation:caer 10s linear infinite;
+}
+
+@keyframes caer{
+
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(120vh) rotate(360deg);
+    }
+
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* TITULO */
+
+h1{
+    font-size:65px;
+    margin-top:20px;
+    text-shadow:0px 0px 20px rgba(255,255,255,0.9);
+    animation:zoom 2s infinite alternate;
+}
+
+@keyframes zoom{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.05);
+    }
+
+}
+
+/* CORAZONES */
+
+.corazon{
+    font-size:50px;
+    animation:latido 1s infinite;
+}
+
+@keyframes latido{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.3);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* FRASE */
+
+.frase{
+    margin-top:20px;
+    font-size:28px;
+    font-weight:bold;
+    text-shadow:0px 0px 10px white;
+}
+
+/* GALERÍA */
+
+.galeria-romantica{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.card{
+    width:260px;
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    box-shadow:0px 0px 20px rgba(255,255,255,0.3);
+    transition:0.8s;
+    cursor:pointer;
+    animation:flotar 4s infinite ease-in-out;
+}
+
+.card:hover{
+    transform:scale(1.08) rotate(2deg);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:25px;
+    border:4px solid white;
+    box-shadow:0px 0px 20px rgba(255,255,255,0.6);
+}
+
+.card p{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* MENSAJE */
+
+.sorpresa{
+    margin-top:50px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+    display:none;
+    animation:aparecer 1s;
+}
+
+.sorpresa h2{
+    font-size:30px;
+    line-height:1.8;
+}
+
+.sorpresa a{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    background:white;
+    color:#ff4f93;
+    padding:15px 30px;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.5s;
+}
+
+.sorpresa a:hover{
+    background:#ff4f93;
+    color:white;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* CARTA */
+
+.mensaje{
+    margin-top:50px;
+    background:rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    font-size:21px;
+    line-height:2;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+}
+
+/* BOTÓN */
+
+button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4f93;
+    font-size:20px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.5s;
+}
+
+button:hover{
+    background:#ff4f93;
+    color:white;
+    transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    padding:20px;
+    font-size:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ESTRELLAS -->
+
+<div class="estrellas">
+    <span style="left:10%; animation-duration:6s;"></span>
+    <span style="left:20%; animation-duration:8s;"></span>
+    <span style="left:30%; animation-duration:10s;"></span>
+    <span style="left:40%; animation-duration:7s;"></span>
+    <span style="left:50%; animation-duration:9s;"></span>
+    <span style="left:60%; animation-duration:6s;"></span>
+    <span style="left:70%; animation-duration:8s;"></span>
+    <span style="left:80%; animation-duration:11s;"></span>
+    <span style="left:90%; animation-duration:7s;"></span>
+</div>
+
+<!-- FLORES -->
+
+<div class="flor" style="left:10%;">🌸</div>
+<div class="flor" style="left:30%; animation-duration:8s;">💖</div>
+<div class="flor" style="left:50%; animation-duration:12s;">🌹</div>
+<div class="flor" style="left:70%; animation-duration:9s;">💕</div>
+<div class="flor" style="left:90%; animation-duration:11s;">🌷</div>
+
+<!-- CONTENIDO -->
+
+<div class="contenedor">
+
+<div class="corazon">❤️ ❤️ ❤️</div>
+
+<h1>Feliz Cumpleaños Mi Amor</h1>
+
+<div class="frase">
+"Eres mi persona favorita ❤️"
+</div>
+
+<!-- GALERÍA -->
+
+<div class="galeria-romantica">
+
+    <!-- FOTO 1 -->
+
+    <div class="card" onclick="mostrarMensaje(
+    'Tú haces mi vida más bonita ❤️',
+    'https://www.youtube.com/watch?v=450p7goxZqg'
+    )">
+
+        <img src="img/WhatsApp Image 2026-05-20 at 1.50.59 PM (1).jpeg">
+
+        <p>Toca la imagen 💖</p>
+
+    </div>
+
+    <!-- FOTO 2 -->
+
+    <div class="card" onclick="mostrarMensaje(
+    'Gracias por hacerme tan feliz ✨',
+    'https://www.youtube.com/watch?v=RgKAFK5djSk'
+    )">
+
+        <img src="img/WhatsApp Image 2026-05-20 at 1.50.59 PM (2).jpeg">
+
+        <p>Toca la imagen 🌸</p>
+
+    </div>
+
+    <!-- FOTO 3 -->
+
+    <div class="card" onclick="mostrarMensaje(
+    'Contigo quiero todos mis días 💕',
+    'https://www.youtube.com/watch?v=kJQP7kiw5Fk'
+    )">
+
+        <img src="img/WhatsApp Image 2026-05-20 at 1.50.59 PM.jpeg">
+
+        <p>Toca la imagen 💌</p>
+
+    </div>
+
+    <!-- FOTO 4 -->
+
+    <div class="card" onclick="mostrarMensaje(
+    'Te amo muchísimo mi niño hermoso ❤️',
+    'https://www.youtube.com/watch?v=OPf0YbXqDm0'
+    )">
+
+        <img src="img/WhatsApp Image 2026-05-20 at 1.51.00 PM.jpeg">
+
+        <p>Toca la imagen 🎂</p>
+
+    </div>
+
+</div>
+
+<!-- MENSAJE SORPRESA -->
+
+<div id="sorpresa" class="sorpresa">
+
+    <h2 id="texto"></h2>
+
+    <a id="link" href="" target="_blank">
+        🎶 Escucha nuestra canción
+    </a>
+
+</div>
+
+<!-- CARTA -->
+
+<div class="mensaje">
+
+Mi amor hermoso ❤️
+
+Hoy celebro la vida de la persona más especial para mí.  
+Gracias por llenar mi corazón de felicidad, amor y momentos inolvidables.
+
+Desde que llegaste todo se volvió más bonito.  
+Tus abrazos son mi lugar favorito y tu sonrisa ilumina mi vida.
+
+Deseo que este cumpleaños esté lleno de alegría, amor y muchísimas bendiciones para ti.  
+Mereces cumplir todos tus sueños porque eres una persona maravillosa.
+
+Siempre voy a estar contigo apoyándote y amándote con todo mi corazón 💖
+
+Feliz cumpleaños mi niño hermoso 🎂✨
+
+</div>
+
+<button onclick="mensajeFinal()">
+Haz Click Mi Amor 💌
+</button>
+
+<footer>
+Para el amor de mi vida 💕
+</footer>
+
+</div>
+
+<script>
+
+function mostrarMensaje(texto, enlace){
+
+    document.getElementById("sorpresa").style.display = "block";
+
+    document.getElementById("texto").innerHTML = texto;
+
+    document.getElementById("link").href = enlace;
+
+}
+
+function mensajeFinal(){
+
+    alert("Gracias por existir mi amor ❤️\nEres el mejor regalo de mi vida 💖");
+
+}
+
+</script>
+
+</body>
+</html>
